@@ -52,12 +52,12 @@ function FormSign() {
         <div>
             <div className='max-w-[600px] m-auto mt-4 px-4'>
                 <div className='flex justify-center items-center gap-2'>
-                    <Text className={`text-center py-8`}>پنل ثبت نام فروشندگان ایرانی شاپ</Text>
-                    <img src={Logo} className='w-9 h-9'/>
+                    <Text className={`text-center py-8`}>پنل ثبت نام دلیوری</Text>
+                    {/* <img src={Logo} className='w-9 h-9'/> */}
                 </div>
                <div className="w-max m-auto flex">
                     <div
-                        className={`px-12 py-3 rounded-tr-xl rounded-br-xl cursor-pointer transition-all duration-100 ${
+                        className={`px-12 py-3 min-w-44 rounded-tr-xl flex justify-center rounded-br-xl cursor-pointer transition-all duration-100 ${
                             activeTab === 0
                             ? 'bg-gradient-to-r from-blue-500/80 to-blue-400/100 backdrop-blur-md text-white shadow-lg shadow-blue-300/50 border-blue-400/50'
                             : 'bg-gray-100 text-black border-gray-300'
@@ -67,10 +67,10 @@ function FormSign() {
                             setStep(0)
                         }}
                     >
-                        <Text>حقیقی</Text>
+                        <Text>ثبت نام</Text>
                     </div>
                     <div
-                        className={`px-12 py-3 rounded-tl-xl rounded-bl-xl cursor-pointer transition-all duration-100 ${
+                        className={`px-12 py-3 min-w-44 rounded-tl-xl rounded-bl-xl cursor-pointer transition-all duration-100 ${
                             activeTab === 1
                             ? 'bg-gradient-to-r from-blue-500/80 to-blue-400/100 backdrop-blur-md text-white shadow-lg shadow-blue-300/50 border-blue-400/50'
                             : 'bg-gray-100 text-black border-gray-300'
@@ -80,7 +80,7 @@ function FormSign() {
                             setStep(1)
                         }}
                     >
-                        <Text>حقوقی</Text>
+                        <Text>لیست مشتریان</Text>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@ function FormSign() {
                         )}
 
                         <ButtonGeneral onClick={handlePostRegister}>
-                            {isPending ? 'درحال ارسال ' : " ارسال" }
+                            {isPending ? 'درحال ارسال ' : " ثبت رجیستر" }
                         </ButtonGeneral>
                         </>
                     )}

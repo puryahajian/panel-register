@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Input({className, placeholder,onChange,value,defaultValue, type, min, inputMode}) {
+function Input({className, placeholder,onChange,value,defaultValue, type, min, inputMode, disabled}) {
     return (
         <input 
             min={min} 
+            disabled={disabled}
             placeholder={placeholder} 
             defaultValue={defaultValue} 
             onChange={onChange} 
