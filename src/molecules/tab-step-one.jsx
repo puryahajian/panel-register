@@ -14,7 +14,8 @@ function TabStepOne({
     nameCompony,
     setNameCompony,
     postalCode,
-    setPostalCode
+    setPostalCode,
+    err
     }) {
     return (
         <div className='mt-6'>
@@ -35,8 +36,8 @@ function TabStepOne({
                     <Input value={valueName} onChange={(e) => setValueName(e.target.value)} className={`mt-2 w-full`}/>
                 </div>
                 <div>
-                    <Text>شماره همراه :</Text>
-                    <Input inputMode={`numeric`} value={phone} onChange={(e) => setPhone(e.target.value)}  className={`mt-2 w-full`}/>
+                    <Text> شماره همراه : <span className='text-red-500'>{err ? err.message : ''}</span></Text>
+                    <Input inputMode={`numeric`} value={phone} onChange={(e) => setPhone(e.target.value)}  className={`mt-2 w-full ${err ? 'border !border-red-500' : ''}`}/>
                 </div>
             </div>
 

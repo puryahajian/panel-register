@@ -6,3 +6,10 @@
   font-family: sans;
   src: url("../src/assets/fonts/IRANSans.ttf");
 }
+
+.css-1ws4s3x{
+  background: rgba(255, 255, 255, 0.719) !important; /* پس‌زمینه نیمه‌شفاف */
+    backdrop-filter: blur(10px) !important; /* افکت بلور */
+    -webkit-backdrop-filter: blur(10px) !important; /* پشتیبانی سافاری */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* حاشیه ظریف */
+}

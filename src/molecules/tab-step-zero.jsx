@@ -16,7 +16,8 @@ function TabStepZero({
     valueFamily,
     setValueFamily,
     postalCode,
-    setPostalCode
+    setPostalCode,
+    err
     }) {
 
     return (
@@ -54,8 +55,8 @@ function TabStepZero({
                     <Input value={numberPass} inputMode={`numeric`} onChange={(e) => setNumberPass(e.target.value)} className={`mt-2 text-left w-full`}/>
                 </div>
                 <div>
-                    <Text>شماره همراه :</Text>
-                    <Input value={phone} inputMode={`numeric`} onChange={(e) => setPhone(e.target.value)} className={`mt-2 text-left w-full`}/>
+                    <Text> شماره همراه : <span className='text-red-500'>{err ? err.message : ''}</span></Text>
+                    <Input value={phone} inputMode={`numeric`} onChange={(e) => setPhone(e.target.value)} className={`mt-2 text-left w-full ${err ? 'border !border-red-500' : ''}`}/>
                 </div>
             </div>
         </div>
